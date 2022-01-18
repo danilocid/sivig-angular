@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sivg-angular';
+
+  ngOnInit(): void {
+    console.log('inicia componente principal');
+  }
 }
+

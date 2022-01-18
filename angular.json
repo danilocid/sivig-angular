@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "08442889-50ee-4e7f-b7a4-6a82c65ba2b7"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -27,9 +30,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/plugins/fontawesome-free/css/all.min.css",
+              "src/assets/css/adminlte.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/plugins/jquery/jquery.min.js",
+              "src/assets/plugins/bootstrap/js/bootstrap.bundle.min.js",
+              "src/assets/js/adminlte.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,9 +102,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/plugins/fontawesome-free/css/all.min.css",
+              "src/assets/css/adminlte.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/plugins/jquery/jquery.min.js",
+              "src/assets/plugins/bootstrap/js/bootstrap.bundle.min.js",
+              "src/assets/js/adminlte.min.js"
+            ]
           }
         }
       }
