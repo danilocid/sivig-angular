@@ -31,7 +31,9 @@
             ],
             "styles": [
               "src/assets/plugins/fontawesome-free/css/all.min.css",
-              "src/assets/css/adminlte.min.css"
+              "src/assets/css/adminlte.min.css",
+              "src/styles.css"
+              
             ],
             "scripts": [
               "src/assets/plugins/jquery/jquery.min.js",
@@ -44,8 +46,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "3mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -110,6 +112,16 @@
               "src/assets/plugins/bootstrap/js/bootstrap.bundle.min.js",
               "src/assets/js/adminlte.min.js"
             ]
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "sivg-angular:build:production",
+            "firebaseProject": "sivig-337e6",
+            "firebaseHostingSite": "sivig-337e6"
           }
         }
       }
