@@ -1,27 +1,17 @@
-# SivgAngular
+# SivigAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
+## Que es? 
+Es un sistema de administración de ventas, inventario y gastos para una pequeña empresa.
 
-## Development server
+## Como está hecho?
+Esta hecho en Angular 13,  la base de datos esta en Firebase de Google Cloud.
+Se utilizan los siguientes paquetes:
+-   AdminLte (3.1.0): Plantilla html y JS para el dashboard
+-   ngx-cookie-service (13.1.2) para la administración de cookies
+-   ngx-toastr (14.2.1) para mensajes informativos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Que hace?
+aun está en fase de desarrollo
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Que se está desarrollando?
+Actualmente se está desarrollando la administración de usuarios y login, además de crear la plantilla básica

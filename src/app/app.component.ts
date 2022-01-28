@@ -17,9 +17,9 @@ export class AppComponent {
   ) { }
   ngOnInit(): void {
     console.log('inicia componente principal');
-    if(this.userService.getToken()){
+    if (this.userService.getToken()) {
       console.log('logeado');
-    }else{
+    } else {
       console.log('no logeado')
       this.router.navigate(['login'])
     }

@@ -25,40 +25,40 @@ export class UsersService {
     this.id = '';
     this.password = '';
     this.nombre = '';
-    
+
     console.log(user);
-   // this.getIdUser(user.email);
-   this.firestore.collection('usuarios').snapshotChanges().subscribe(data => {
-    data.forEach((element: any) => {
+    // this.getIdUser(user.email);
+    this.firestore.collection('usuarios').snapshotChanges().subscribe(data => {
+      data.forEach((element: any) => {
 
-       if (user.email == element.payload.doc.data().mail) {
-        console.log('entra');
-        this.id = element.payload.doc.id
-        this.password = element.payload.doc.data().password;
-        this.nombre = element.payload.doc.data().nombre;
-      }
-    });
-    console.log(this.id + ' - ' + this.nombre + ' - ' + this.password);
-
-
-    if (user.password == this.password) {
-      console.log('logeado');
-      this.toastr.success('Usuario logeado', 'Exito', {
-        positionClass: 'toast-top-right'
+        if (user.email == element.payload.doc.data().mail) {
+          console.log('entra');
+          this.id = element.payload.doc.id
+          this.password = element.payload.doc.data().password;
+          this.nombre = element.payload.doc.data().nombre;
+        }
       });
-      this.setToken(this.id);
-      this.router.navigate(['/'])
-    } else {
-      if (user.password != this.password) {
-        console.log('contraseña equivocada');
-        this.toastr.error('usuario y/o contraseña erroneos', 'error', {
+      console.log(this.id + ' - ' + this.nombre + ' - ' + this.password);
+
+
+      if (user.password == this.password) {
+        console.log('logeado');
+        this.toastr.success('Usuario logeado', 'Exito', {
           positionClass: 'toast-top-right'
         });
-      } 
-      
-    }
-  });
-  
+        this.setToken(this.id);
+        this.router.navigate(['/'])
+      } else {
+        if (user.password != this.password) {
+          console.log('contraseña equivocada');
+          this.toastr.error('usuario y/o contraseña erroneos', 'error', {
+            positionClass: 'toast-top-right'
+          });
+        }
+
+      }
+    });
+
   }
   setToken(id: string) {
     this.cookies.set("token", id);

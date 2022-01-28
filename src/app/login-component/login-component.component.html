@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Google Font: Source Sans Pro -->
- 
+
 </head>
+
 <body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-    <a>SIVIG</a>
-  </div>
-  <!-- /.login-logo -->
-  <div class="card">
-    <div class="card-body login-card-body">
-      <p class="login-box-msg">Iniciar sesion</p>
-
-      <form (ngSubmit)="login()">
-        <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email" name="email" required [(ngModel)]="email">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
-            </div>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="password">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
-            </div>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <button type="submit" class="btn btn-primary btn-block" >Iniciar sesion</button>
-        </div>
-          
-          <!-- /.col -->
-       
-      </form>
-
+  <div class="login-box">
+    <div class="login-logo">
+      <a>SIVIG</a>
     </div>
-    <!-- /.login-card-body -->
-  </div>
-</div>
-<!-- /.login-box -->
+    <!-- /.login-logo -->
+    <div class="card">
+      <div class="card-body login-card-body">
+        <p class="login-box-msg">Iniciar sesion</p>
 
-<!-- jQuery -->
+        <form (ngSubmit)="login()">
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Email" name="email" required [(ngModel)]="email">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-envelope"></span>
+              </div>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="password">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </div>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <button type="submit" class="btn btn-primary btn-block">Iniciar sesion</button>
+          </div>
+
+          <!-- /.col -->
+
+        </form>
+
+      </div>
+      <!-- /.login-card-body -->
+    </div>
+  </div>
+  <!-- /.login-box -->
+
+  <!-- jQuery -->
 
 </body>
-</html>
 
+</html>
