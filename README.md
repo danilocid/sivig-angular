@@ -1,4 +1,7 @@
-# SivigAngular
+# Sivig
+
+actualizado al 27-01-22
+
 
 ## Que es? 
 Es un sistema de administración de ventas, inventario y gastos para una pequeña empresa.
