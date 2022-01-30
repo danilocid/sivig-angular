@@ -11,6 +11,9 @@
       "schematics": {
         "@schematics/angular:application": {
           "strict": true
+        },
+        "@schematics/angular:component": {
+          "skipTests": true
         }
       },
       "root": "",
@@ -33,7 +36,6 @@
               "src/assets/plugins/fontawesome-free/css/all.min.css",
               "src/assets/css/adminlte.min.css",
               "src/styles.css"
-              
             ],
             "scripts": [
               "src/assets/plugins/jquery/jquery.min.js",

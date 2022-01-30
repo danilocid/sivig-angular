@@ -6,8 +6,7 @@ import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-login-component',
-  templateUrl: './login-component.component.html',
-  styleUrls: ['./login-component.component.css']
+  templateUrl: './login-component.component.html'
 })
 export class LoginComponentComponent implements OnInit {
 

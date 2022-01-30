@@ -16,5 +16,5 @@ Se utilizan los siguientes paquetes:
 ## Que hace?
 aun está en fase de desarrollo
 
-# Que se está desarrollando?
+## Que se está desarrollando?
 Actualmente se está desarrollando la administración de usuarios y login, además de crear la plantilla básica

@@ -11,12 +11,22 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponentComponent } from './base-components/header-component/header-component.component';
+import { SidebarComponentComponent } from './base-components/sidebar-component/sidebar-component.component';
+import { ListUsuariosComponent } from './configuracion/usuarios/list-usuarios/list-usuarios.component';
+import { DashboardComponent } from './base-components/dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponentComponent,
-    LoginComponentComponent
+    LoginComponentComponent,
+    HeaderComponentComponent,
+    SidebarComponentComponent,
+    ListUsuariosComponent,
+    DashboardComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -28,6 +38,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ToastrModule.forRoot()
   ],
   providers: [CookieService],
-  bootstrap: [AppComponent]
+  bootstrap: [HomeComponentComponent]
 })
 export class AppModule { }
