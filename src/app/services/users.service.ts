@@ -60,6 +60,17 @@ export class UsersService {
     });
 
   }
+  CheckLogin() {
+
+    console.log('inicia componente principal');
+    if (this.getToken()) {
+      console.log('logeado');
+    } else {
+      console.log('no logeado')
+      this.router.navigate(['login'])
+
+    }
+  }
   setToken(id: string) {
     this.cookies.set("token", id);
   }
@@ -86,7 +97,7 @@ export class UsersService {
 
     });
   }
-  getUsuarios(mail: string): Observable<any> {
+  getUsuarios(): Observable<any> {
 
     return this.firestore.collection('usuarios').snapshotChanges();
 
