@@ -1,57 +1,30 @@
-<!DOCTYPE html>
-<html lang="es">
+<!-- login -->
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
 
-  <!-- Google Font: Source Sans Pro -->
-
-</head>
-
-<body class="hold-transition login-page">
-  <div class="login-box">
-    <div class="login-logo">
-      <a>SIVIG</a>
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="/assets/img/logo_web.png" height="70px" id="icon" alt="User Icon" />
     </div>
-    <!-- /.login-logo -->
-    <div class="card">
-      <div class="card-body login-card-body">
-        <p class="login-box-msg">Iniciar sesion</p>
 
-        <form (ngSubmit)="login()">
-          <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="Email" name="email" required [(ngModel)]="email">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-envelope"></span>
-              </div>
-            </div>
-          </div>
-          <div class="input-group mb-3">
-            <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="password">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-lock"></span>
-              </div>
-            </div>
-          </div>
-          <div class="input-group mb-3">
-            <button type="submit" class="btn btn-primary btn-block">Iniciar sesion</button>
-          </div>
+    <!-- Login Form -->
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
+      <input type="text" class="fadeIn second" formControlName="mail" id="mail" placeholder="email">
+      <div><span *ngIf="isValid('mail')" class="text-danger fadeIn">
+          * El email no es válido
+        </span></div>
 
-          <!-- /.col -->
+      <input type="password" class="fadeIn third" formControlName="formPassword" id="floatingPassword"
+        placeholder="Password">
 
-        </form>
 
-      </div>
-      <!-- /.login-card-body -->
-    </div>
+      <div><a *ngIf="isValid('formPassword')" class="text-danger fadeIn"> * Contraseña no válida </a></div>
+      <input (click)="onSubmit()" type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+
   </div>
-  <!-- /.login-box -->
-
-  <!-- jQuery -->
-
-</body>
-
-</html>
+</div>

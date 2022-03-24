@@ -1,4 +1,9 @@
-<body class="hold-transition sidebar-mini">
+<body *ngIf="router.url === '/login'">
+    <router-outlet></router-outlet>
+</body>
+
+
+<body *ngIf="router.url != '/login'" class="hold-transition sidebar-mini">
     <div class="wrapper">
 
         <!-- Navbar -->
@@ -20,7 +25,7 @@
         <footer class="main-footer">
             <!-- To the right -->
             <div class="float-right d-none d-sm-inline">
-                Version ALPHA (30012022)
+                Version ALPHA (06022022)
             </div>
             <!-- Default to the left -->
             <strong>Copyright &copy; 2022 <a href="https://github.com/danilocid">Danilo Cid</a>.</strong> Algunos

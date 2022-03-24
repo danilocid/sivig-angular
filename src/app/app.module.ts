@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
@@ -15,6 +15,7 @@ import { HeaderComponentComponent } from './base-components/header-component/hea
 import { SidebarComponentComponent } from './base-components/sidebar-component/sidebar-component.component';
 import { ListUsuariosComponent } from './configuracion/usuarios/list-usuarios/list-usuarios.component';
 import { DashboardComponent } from './base-components/dashboard/dashboard.component';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
 
 
 @NgModule({
@@ -31,11 +32,12 @@ import { DashboardComponent } from './base-components/dashboard/dashboard.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     BrowserAnimationsModule,
     AngularFirestoreModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    AngularFireAnalyticsModule
   ],
   providers: [CookieService],
   bootstrap: [HomeComponentComponent]

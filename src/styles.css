@@ -190,4 +190,467 @@
       width: 25em;
     }
   }
+
+  /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import "~@ng-select/ng-select/themes/default.theme.css";
+body {
+  font-size: .875rem;
+  font-family: 'Lato', sans-serif;  
+}
+
+footer{
+  background-color: #222222;
+  height: 7.5%;
+}
+
+.img-icon{
+  width: 25px;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    top: 5rem;
+  }
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+/* datepicker */
+.ngb-dp-header {
+  background-color: #183247 !important;
+}
+
+.custom-select {
+  display: block !important;
+}
+
+div.btn-light:hover {
+  background-color: #4EBDAD !important;
+}
+
+.btn-light.text-muted:hover {
+  background-color: #EDEDED !important;
+}
+
+/* End datepicker */
+
+/**
+ * Buttons
+ */
+
+.custom-btn{
+  background-color: #183247 !important;
+  color: #fff !important;
+}
+
+.custom-disabled-btn {
+  background-color: #EDEDED !important;
+  color: #979797 !important;
+}
+
+.btn-form-action {
+  background-color: #0EABEC !important;
+  color: #FFF !important;
+}
+
+/* .button-form-outline de ser necesario agregar. Caso contrario, usar clases de bootstrap    */
+.custom-btn-outline {
+  border-color: #0EABEC !important;
+  color: #0EABEC !important;
+}
+
+.custom-btn:active{
+  background-color: #183247 !important;
+  color: #fff !important;
+}
+
+.custom-btn:hover{
+  background-color: #2858808c !important;
+  color: #fff !important;
+}
+
+.custom-btn-save{
+  background-color: #4EBDAD;
+  color:#fff;
+}
+
+/* btn font-size */
+
+.btn-font-16 {
+  font-size: 16px;
+}
+
+.btn-font-24 {
+  font-size: 24px;
+}
+
+/**
+ * Font-size
+ */
+
+.font-size-10{
+  font-size: 10px;
+}
+.font-size-12{
+  font-size: 12px;
+}
+.font-size-14{
+  font-size: 14px;
+}
+
+.font-size-16{
+  font-size: 16px;
+}
+
+.font-size-20{
+  font-size: 20px;
+}
+.font-size-24{
+  font-size: 24px;
+}
+
+.font-size-30{
+  font-size: 30px;
+}
+
+/**
+ * Font Color
+ */
+
+.white-text{
+  color: #fff;
+}
+
+.text-danger{
+  color: #ff0000 !important;
+  font-size: smaller !important;
+}
+
+.blue-text{
+  color: #183247;
+}
+
+.grey-text{
+  color: #979797;
+}
+
+/**
+* Status Badge
+*/
+
+.status-active,
+.status-inProcess,
+.status-finished,
+.status-rejected,
+.status-inReview{
+  font-family: Lato, sans-serif;
+  cursor: default;
+  border-radius:10px;
+  padding: 4.8px 6% 4.8px 6% !important;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  background-color: #3dd5f3;
+  color: #fff;
+  min-width: 90px;
+  margin: 0;
+}
+
+.status-inProcess{
+  background-color: #183247;
+  color:#ffc107;
+}
+
+.status-finished {
+  color: #fff;
+  background-color: #4EBDAD;
+}
+.status-rejected {
+  background-color: #dc3545;
+}
+.status-inReview {
+  color: #183247;
+  background-color: #ffc107;
+}
+
+
+
+/**
+ * Table
+ */
+.page-link{
+  border: none;
+}
+
+table.dataTable td.select-checkbox.sorting_1::before{
+  width: 20px;
+  height: 20px;
+  color:#183247;
+  border-radius: 3px;
+  border: 2px solid #183247;
+  cursor: pointer;
+}
+table.dataTable tr.selected td.select-checkbox.sorting_1::after{
+
+  font-size: 12px;
+  color:#fff;
+  margin-top: -1px;
+  margin-left: -6px;
+  background-color: #0EABEC;
+  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border: 2px solid #183247;  
+}
+
+button.dt-button.buttons-excel.buttons-html5,
+button.dt-button.buttons-pdf.buttons-html5,
+button.dt-button.buttons-print,
+button.dt-button.buttons-excel.buttons-html5:hover,
+button.dt-button.buttons-print:hover,
+button.dt-button,
+div.dt-button,
+a.dt-button,
+input.dt-button{
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+button.custom-save-btnTable{
+  background-color: #4EBDAD;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+button.custom-save-btnTable:hover{
+  background-color: #4bb3a5;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+button.custom-warning-btnTable{
+  background-color: #ffc107;
+  color: #183247;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+button.custom-warning-btnTable:hover{
+  background-color: #ffc107b2;
+  color: #183247;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+button.custom-delete-btnTable{
+  background-color: #dc3545;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+button.custom-delete-btnTable:hover{
+  background-color: #a52834;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+button.custom-print-btnTable{
+  background-color: #183247;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+button.custom-print-btnTable:hover{
+  background-color: #2858808c;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+button.custom-disabled-btnTable {
+  background-color: #EDEDED;
+  color: #979797;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  color: #FFF;
+}
+
+table.dataTable tbody > tr.odd.selected, 
+table.dataTable tbody > tr > .selected,
+table.dataTable tbody > tr.even.selected, 
+table.dataTable tbody > tr > .selected,
+table.dataTable.hover tbody > tr.odd.selected:hover, 
+table.dataTable.hover tbody > tr > .selected:hover, 
+table.dataTable.display tbody > tr.odd.selected:hover, 
+table.dataTable.display tbody > tr > .selected:hover,
+table.dataTable.hover tbody > tr.even.selected:hover, 
+table.dataTable.hover tbody > tr > .selected:hover, 
+table.dataTable.display tbody > tr.even.selected:hover, 
+table.dataTable.display tbody > tr > .selected:hover,
+table.dataTable tbody > tr.even.selected:focus,
+table.dataTable tbody > tr.even:hover,
+table.dataTable tbody > tr.odd:hover,
+table.dataTable tbody > tr.even:active,
+table.dataTable tbody > tr.odd:active
+{
+  cursor: pointer;
+  background-color: #ededed;
+}
+
+/* Columna del footer de la tabla donde se encuentran la información */
+.information{
+  font-size: 12px;
+  color: #979797;
+  margin-top: 5px;
+}
+/* Fila que contiene la información, paginación y botones de la tabla */
+.foot{
+  background-color: #F8F9FA;
+  align-self: center;
+}
+/* Fila donde se encuentra el input search de la tabla */
+.searchbar{
+  background-color: #212833;
+  height: 50px;
+}
+
+.tableBody{
+  margin-bottom: 1px;
+}
+
+/* pointer */
+.pointer {
+  cursor: pointer;
+}
+
+/* modal header */
+/* .modal-header {
+  background-color: #183247;
+  color: #ffffff
+} */
+
+/* Input search de tabla */
+input.form-control.form-control-sm{
+  margin-top: 9px;
+}
+
+div.dataTables_wrapper div.dataTables_filter label{
+  color: #FFF;
+}
+
+/* SCROLL */
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #979797;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #183247;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2858808c;
+}
+
+::-webkit-scrollbar-corner{
+    background: #979797;
+}
+
+
+/**
+*Animaciones
+*/
+
+.fadeIn{
+    animation-name: fadeIn;
+}
+
+.fadeOut{
+    animation-name: fadeOut;
+}
+
+.fadeIn,
+.fadeOut{
+    -webkit-animation-duration: 0.30s;
+    animation-duration: 0.30s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
   
