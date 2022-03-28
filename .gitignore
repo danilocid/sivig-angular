@@ -23,12 +23,11 @@ chrome-profiler-events*.json
 *.sublime-workspace
 
 # IDE - VSCode
-.vscode/*
-.history/*
-.vs
-
+/.vscode
+/.history
+/.vs
 # misc
-/.angular/cache
+/.angular
 /.sass-cache
 /connect.lock
 /coverage

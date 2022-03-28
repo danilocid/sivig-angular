@@ -10,7 +10,8 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
-          "strict": true
+          "strict": true,
+          "style": "scss"
         },
         "@schematics/angular:component": {
           "skipTests": true
@@ -33,14 +34,20 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/plugins/fontawesome-free/css/all.min.css",
-              "src/assets/css/adminlte.min.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-              "src/assets/plugins/jquery/jquery.min.js",
-              "src/assets/plugins/bootstrap/js/bootstrap.bundle.min.js",
-              "src/assets/js/adminlte.min.js"
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true,
+            "allowedCommonJsDependencies": [
+              "gatekeeper-client-sdk",
+              "path",
+              "os",
+              "fs"
             ]
           },
           "configurations": {
@@ -106,14 +113,30 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/plugins/fontawesome-free/css/all.min.css",
-              "src/assets/css/adminlte.min.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-              "src/assets/plugins/jquery/jquery.min.js",
-              "src/assets/plugins/bootstrap/js/bootstrap.bundle.min.js",
-              "src/assets/js/adminlte.min.js"
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "sivg-angular:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "sivg-angular:serve:production"
+            }
           }
         },
         "deploy": {

@@ -46,7 +46,7 @@ export class UsersService {
         this.toastr.success('Usuario logeado', 'Exito', {
           positionClass: 'toast-top-right'
         });
-        this.setToken(this.id);
+        this.setToken(this.id, this.nombre);
         this.router.navigate(['/'])
       } else {
         if (user.password != this.password) {
@@ -71,11 +71,13 @@ export class UsersService {
 
     }
   }
-  setToken(id: string) {
+  setToken(id: string, name: string) {
     this.cookies.set("token", id);
+    this.cookies.set("name", name);
   }
   getToken() {
     return this.cookies.get("token");
+
   }
   deleteToken() {
     this.cookies.deleteAll();
@@ -92,6 +94,7 @@ export class UsersService {
           this.id = element.payload.doc.id
           this.password = element.payload.doc.data().password;
           this.nombre = element.payload.doc.data().nombre;
+
         }
       });
 
@@ -103,4 +106,8 @@ export class UsersService {
 
 
   }
+  getLogedUserName() {
+    return this.cookies.get("name");
+  }
+
 }
