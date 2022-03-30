@@ -3,14 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from '@modules/main/main.component';
 import { BlankComponent } from '@pages/blank/blank.component';
 import { LoginComponent } from '@modules/login/login.component';
-import { ProfileComponent } from '@pages/profile/profile.component';
-
 import { DashboardComponent } from '@pages/dashboard/dashboard.component';
 import { AuthGuard } from '@guards/auth.guard';
 import { NonAuthGuard } from '@guards/non-auth.guard';
-
-
-import { PrivacyPolicyComponent } from '@modules/privacy-policy/privacy-policy.component';
 import { MainMenuComponent } from '@pages/main-menu/main-menu.component';
 import { SubMenuComponent } from '@pages/main-menu/sub-menu/sub-menu.component';
 
@@ -22,43 +17,34 @@ const routes: Routes = [
     canActivateChild: [AuthGuard],
     children: [
       {
-        path: 'profile',
-        component: ProfileComponent
-      },
-      {
         path: 'blank',
-        component: BlankComponent
+        component: BlankComponent,
       },
       {
         path: 'sub-menu-1',
-        component: SubMenuComponent
+        component: SubMenuComponent,
       },
       {
         path: 'sub-menu-2',
-        component: BlankComponent
+        component: BlankComponent,
       },
       {
         path: '',
-        component: DashboardComponent
-      }
-    ]
+        component: DashboardComponent,
+      },
+    ],
   },
   {
     path: 'login',
     component: LoginComponent,
-    canActivate: [NonAuthGuard]
+    canActivate: [NonAuthGuard],
   },
 
-  {
-    path: 'privacy-policy',
-    component: PrivacyPolicyComponent,
-    canActivate: [NonAuthGuard]
-  },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,9 +1,10 @@
 {
   "name": "sivg-angular",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "scripts": {
     "start": "ng serve",
+    "prebuild": "npm --no-git-tag-version version patch",
     "build": "ng build --configuration production",
     "test": "ng test",
     "lint": "ng lint",

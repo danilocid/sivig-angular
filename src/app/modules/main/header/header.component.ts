@@ -1,6 +1,4 @@
-import { AppState } from '../../../store/state';
-import { ToggleControlSidebar, ToggleSidebarMenu } from '../../../store/ui/actions';
-import { UiState } from '../../../store/ui/state';
+('');
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Store } from '@ngrx/store';
@@ -9,39 +7,23 @@ import { Observable } from 'rxjs';
 
 const BASE_CLASSES = 'main-header navbar navbar-expand';
 @Component({
-    selector: 'app-header',
-    templateUrl: './header.component.html',
-    styleUrls: ['./header.component.scss']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-    @HostBinding('class') classes: string = BASE_CLASSES;
-    public ui: Observable<UiState>;
-    public searchForm: FormGroup;
+  @HostBinding('class') classes: string = BASE_CLASSES;
+  public searchForm: FormGroup;
 
-    constructor(
-        private appService: AppService,
-        private store: Store<AppState>
-    ) { }
+  constructor(private appService: AppService) {}
 
-    ngOnInit() {
-        this.ui = this.store.select('ui');
-        this.ui.subscribe((state: UiState) => {
-            this.classes = `${BASE_CLASSES} ${state.navbarVariant}`;
-        });
-        this.searchForm = new FormGroup({
-            search: new FormControl(null)
-        });
-    }
+  ngOnInit() {
+    this.searchForm = new FormGroup({
+      search: new FormControl(null),
+    });
+  }
 
-    logout() {
-        this.appService.logout();
-    }
-
-    onToggleMenuSidebar() {
-        this.store.dispatch(new ToggleSidebarMenu());
-    }
-
-    onToggleControlSidebar() {
-        this.store.dispatch(new ToggleControlSidebar());
-    }
+  logout() {
+    this.appService.logout();
+  }
 }

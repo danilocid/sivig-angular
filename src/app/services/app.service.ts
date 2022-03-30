@@ -83,4 +83,13 @@ export class AppService {
     this.user = null;
     this.router.navigate(['/login']);
   }
+  cheeckLogin() {
+    console.log('cheeckLogin');
+
+    if (localStorage.getItem('token')) {
+      this.router.navigate(['/']);
+    } else {
+      this.router.navigate(['/login']);
+    }
+  }
 }
