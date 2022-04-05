@@ -20,28 +20,17 @@ export class MenuSidebarComponent implements OnInit {
 export const MENU = [
   {
     name: 'Dashboard',
-    icon: 'fas fa-cogs',
+    icon: 'fas fa-home',
     path: ['/'],
   },
   {
-    name: 'Dashboard',
-    path: ['/hola'],
-  },
-  {
-    name: 'Blank',
-    path: ['/blank'],
-  },
-  {
-    name: 'Main Menu',
+    name: 'Configuracion',
+    icon: 'fas fa-cog',
     children: [
       {
-        name: 'Sub Menu',
-        path: ['/sub-menu-1'],
-      },
-
-      {
-        name: 'Blank',
-        path: ['/sub-menu-2'],
+        name: 'Usuarios',
+        icon: 'fas fa-user-cog',
+        path: ['/configuracion/usuarios'],
       },
     ],
   },

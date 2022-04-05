@@ -25,8 +25,6 @@ import { ButtonComponent } from './components/button/button.component';
 import { registerLocaleData } from '@angular/common';
 import localeEscl from '@angular/common/locales/es-CL';
 import { UserComponent } from './modules/main/header/user/user.component';
-import { MainMenuComponent } from './pages/main-menu/main-menu.component';
-import { SubMenuComponent } from './pages/main-menu/sub-menu/sub-menu.component';
 import { MenuItemComponent } from './components/menu-item/menu-item.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { DropdownMenuComponent } from './components/dropdown/dropdown-menu/dropdown-menu.component';
@@ -48,8 +46,6 @@ registerLocaleData(localeEscl, 'es-CL');
     NotificationsComponent,
     ButtonComponent,
     UserComponent,
-    MainMenuComponent,
-    SubMenuComponent,
     MenuItemComponent,
     DropdownComponent,
     DropdownMenuComponent,

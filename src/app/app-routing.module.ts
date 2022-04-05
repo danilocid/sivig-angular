@@ -6,8 +6,6 @@ import { LoginComponent } from '@modules/login/login.component';
 import { DashboardComponent } from '@pages/dashboard/dashboard.component';
 import { AuthGuard } from '@guards/auth.guard';
 import { NonAuthGuard } from '@guards/non-auth.guard';
-import { MainMenuComponent } from '@pages/main-menu/main-menu.component';
-import { SubMenuComponent } from '@pages/main-menu/sub-menu/sub-menu.component';
 
 const routes: Routes = [
   {
@@ -21,16 +19,15 @@ const routes: Routes = [
         component: BlankComponent,
       },
       {
-        path: 'sub-menu-1',
-        component: SubMenuComponent,
-      },
-      {
-        path: 'sub-menu-2',
-        component: BlankComponent,
-      },
-      {
         path: '',
         component: DashboardComponent,
+      },
+      {
+        path: 'configuracion',
+        loadChildren: () =>
+          import('./configuracion/configuracion.module').then(
+            (m) => m.ConfiguracionModule
+          ),
       },
     ],
   },
@@ -44,7 +41,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
