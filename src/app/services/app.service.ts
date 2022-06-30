@@ -77,6 +77,9 @@ export class AppService {
   getObjectById(id) {
     return this.firestore.collection('usuarios').doc(id).valueChanges();
   }
+  getUsers() {
+    return this.firestore.collection('usuarios').snapshotChanges();
+  }
 
   logout() {
     localStorage.clear();

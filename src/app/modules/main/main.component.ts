@@ -1,6 +1,5 @@
 import { Component, HostBinding, OnInit, Renderer2 } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
+import { AppService } from '@services/app.service';
 
 @Component({
   selector: 'app-main',
@@ -10,9 +9,10 @@ import { Observable } from 'rxjs';
 export class MainComponent implements OnInit {
   @HostBinding('class') class = 'wrapper';
 
-  constructor() {}
+  constructor(private AppService: AppService) {}
 
   ngOnInit() {
     console.log('main component');
+    this.AppService.cheeckLogin();
   }
 }
